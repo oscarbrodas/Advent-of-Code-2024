@@ -19,6 +19,10 @@ right = for i <- 0..length(array)-1, not is_even(i) do
   Enum.at(array, i)
 end
 
+# Sort the lists
+left = Enum.sort(left)
+right = Enum.sort(right)
+
 diffs = for i <- 0..999 do
   abs(Enum.at(left, i) - Enum.at(right, i))
 end
